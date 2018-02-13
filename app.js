@@ -15,4 +15,7 @@ if (module === require.main) {
 var TestController = require('./TestController');
 app.use('/test', TestController);
 
+var EmployeeController = require('./EmployeeController');
+app.use('/api', EmployeeController);
+
 module.exports = app;
