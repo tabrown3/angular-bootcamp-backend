@@ -4,10 +4,6 @@ const express = require('express');
 
 const app = express();
 
-// app.get('/', (req, res) => {
-//   res.status(200).send('Hello, world!');
-// });
-
 if (module === require.main) {
 
   const server = app.listen(process.env.PORT || 8081, () => {
@@ -16,8 +12,7 @@ if (module === require.main) {
   });
 }
 
-var EmployeeController = require('./EmployeeController');
-// app.use('/employees', EmployeeController);
-app.use('/', EmployeeController);
+var TestController = require('./TestController');
+app.use('/test', TestController);
 
 module.exports = app;
